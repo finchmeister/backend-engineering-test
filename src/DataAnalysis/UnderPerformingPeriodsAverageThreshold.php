@@ -36,6 +36,7 @@ class UnderPerformingPeriodsAverageThreshold implements UnderPerformingPeriodsIn
             return [];
         }
         $periodI = 0;
+        $periodDates = [];
         $periodDates[$periodI][] = $dTimes[0];
         for ($i = 1; $i < $dTimesCount; $i++) {
             if (strtotime($dTimes[$i-1] . '+1 day') === strtotime($dTimes[$i])) {
@@ -66,5 +67,4 @@ class UnderPerformingPeriodsAverageThreshold implements UnderPerformingPeriodsIn
     {
         return ($metricAverage - $metricValue) > $metricAverage * self::UNDER_PERFORMING_THRESHOLD;
     }
-
 }

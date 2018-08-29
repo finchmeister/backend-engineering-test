@@ -188,9 +188,8 @@ EOT;
      * @param string[] $dTimeValues
      * @return string
      */
-    protected function getPeriodCheckedTo(array $dTimeValues)
+    protected function getPeriodCheckedTo(array $dTimeValues): string
     {
         return end($dTimeValues);
     }
-
 }

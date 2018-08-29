@@ -25,7 +25,7 @@ class UnderPerformingPeriodsAverageThresholdTest extends TestCase
      * @param array $expectedPeriods
      * @param array $dTimes
      */
-    public function testGetPeriodsFromDTime(array $expectedPeriods, array $dTimes)
+    public function testGetPeriodsFromDTime(array $expectedPeriods, array $dTimes): void
     {
         $this->assertEquals($expectedPeriods, $this->underPerformingPeriodService->getPeriodsFromDTimes($dTimes));
     }
@@ -80,7 +80,7 @@ class UnderPerformingPeriodsAverageThresholdTest extends TestCase
      * @param $expectedUnderPerformingPeriods
      * @param $metricData
      */
-    public function testGetUnderPerformingPeriods($expectedUnderPerformingPeriods, $metricData)
+    public function testGetUnderPerformingPeriods($expectedUnderPerformingPeriods, $metricData): void
     {
         $this->assertEquals(
             $expectedUnderPerformingPeriods,
